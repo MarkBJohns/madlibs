@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Madlibs {% endblock %}
+
+{% block header %} Mablibs {% endblock %}
+
+{% block main %}
+
+<form action="/story/result" method="POST">
+    {% for word in words %}
+        <label for="{{ word }}">{{ word }}</label>
+        <input type="text" id="{{ word }}" name="{{ word }}">
+        <br>
+    {% endfor %}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

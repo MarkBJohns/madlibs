@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Story Time{% endblock %} 
+
+{% block header %} Story Time {% endblock %}
+
+{% block main %}
+
+<p>{{ story.generate(form_data) }}</p>
+
+{% endblock %}
